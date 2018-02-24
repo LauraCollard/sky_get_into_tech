@@ -3,5 +3,5 @@
 - PHP
   - Exercise 8: create a simple calculator (switch)
 
-----
-PHP, HTML, CSS, JavaScript, MySQL
+
+**Toolkit**: PHP, HTML, CSS, JavaScript, MySQL
