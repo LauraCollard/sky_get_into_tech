@@ -2,6 +2,7 @@
 
 - PHP
   - Exercise 8: create a simple calculator (switch)
+  - Exercise 10: rock, paper, scissors game
 
 
 **Toolkit**: PHP, HTML, CSS, JavaScript, MySQL
