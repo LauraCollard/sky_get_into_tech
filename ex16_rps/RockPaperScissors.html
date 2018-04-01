@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <style>
+            body {
+                margin-top: 80px;
+                background-color: #0278ae;
+                color: white;
+            }
+            h1 {
+                margin-bottom: 80px;
+            }
+            .icon {
+                padding: 20px 20px 20px 20px;
+                color: #0278ae;
+                font-size: 100px;
+                /* margin-bottom: 20px; */
+                background-color: white;
+                border-radius: 20%;
+                margin-bottom: 15px;
+            }
+            .gameResult {
+                margin-top: 100px;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Rock, Paper or Scissors?</h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-4" onclick="play('Rock')">
+                    <i class="fas fa-hand-rock icon" id="rock"></i><h2>Rock</h2>
+                </div>
+                <div class="col-4" onclick="play('Paper')">
+                    <i class="fas fa-hand-paper icon" id="paper"></i>
+                    <h2>Paper</h2>
+                </div>
+                <div class="col-4" onclick="play('Scissors')">
+                    <i class="fas fa-hand-scissors icon" id="scissors"></i>
+                    <h2>Scissors</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid gameResult">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3><span id="result"><!--result here--></span></h3>
+            </div>
+        </div>
+          
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script language="javascript" type="text/javascript">
+
+            function play(strChoice){
+                //alert(strChoice);
+                var xhttp= new XMLHttpRequest();
+                xhttp.onreadystatechange= function(){
+                    if (this.readyState==4 && this.status==200){
+                        document.getElementById("result").innerHTML=this.responseText;
+                    }
+                };
+                xhttp.open("POST", "GameFunctions.php?choice="+strChoice, true);
+                xhttp.send();
+            }
+
+        </script>
+        
+        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
