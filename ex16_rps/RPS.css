@@ -1,0 +1,22 @@
+
+body {
+     margin-top: 80px;
+     background-color: #0278ae;
+     color: white;
+ }
+ h1 {
+     margin-bottom: 80px;
+ }
+ .icon {
+     padding: 20px 20px 20px 20px;
+     color: #0278ae;
+     font-size: 100px;
+     background-color: white;
+     border-radius: 20%;
+     margin-bottom: 15px;
+ }
+ .gameResult {
+     margin-top: 100px;
+ }
+
+
