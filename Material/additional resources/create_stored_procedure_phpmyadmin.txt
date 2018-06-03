@@ -1,0 +1,7 @@
+
+create stored procedure in phpmyadmin
+
+select a DB
+"routine" tab
+Add routine
+(execute after creating to test it)
