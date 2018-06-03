@@ -16,6 +16,8 @@ Some exercises from the programme
   - Ex 12: RE
   - Ex 11: include / namespace
   - Ex 10: Rock Paper Scissors, PHP
+  - Ex 9: arrays
+  - Ex 8: calculator, PHP
   - JS demo
   - OO things
 
